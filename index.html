@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Богач Эдуард</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header id="top" class="header">
+        <div class="header__container fixed-container">
+            <button id="header-button" class="header__button" aria-label="Открыть меню">
+                <div id="lineOne" class="header-button__line"></div>
+                <div id="lineTwo" class="header-button__line"></div>
+                <div id="lineThree" class="header-button__line"></div>
+            </button>
+            <nav class="header__nav nav">
+                <ul class="nav__list" id="header-link">
+                    <li><a href="#service" class="nav__item__service">Услуги</a></li>
+                    <li><a href="#portfolio" class="nav__item__portfolio">Портфолио</a></li>
+                    <li><a href="#price" class="nav__item__price">Стоимость</a></li>
+                </ul>
+            </nav>
+            <div class="header__contacts">
+                <a class="header__phone" href="tel:+79996770123">+7 (999) 677-01-23</a>
+                <button class="cell-button header__cell-button" id="cell-button" href="#">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro__wrapper">
+                <div class="intro__elements decor-elements" aria-hidden="true">
+                    <span class="decor-elements__symbol decor-elements__symbol--1">{&nbsp;}</span>
+                    <span class="decor-elements__symbol decor-elements__symbol--2">&lt;div&gt;</span>
+                    <span class="decor-elements__symbol decor-elements__symbol--3">#</span>
+                    <span class="decor-elements__symbol decor-elements__symbol--4">&lt;div&gt;</span>
+                    <span class="decor-elements__symbol decor-elements__symbol--5">&lt;/&gt;</span>
+                    <span class="decor-elements__symbol decor-elements__symbol--6">&lt;/&gt;</span>
+                </div>
+                <div class="intro__content interim-fixed flex-container">
+                    <div class="intro__info">
+                        <h1 class="intro__title">Эдуард Богач</h1>
+                        <span class="intro__desc">Frontend-разработчик и веб-верстальщик</span>
+                        <a class="button intro__link" href="#service">Узнать больше</a>
+                    </div>
+                    <div class="intro__bg">
+                        <img class="intro__photo" src="img/man-bg.png" alt="Фото">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- БЛОК "ЧТО Я ДЕЛАЮ" -->
+
+        <section id="service" class="doing fixed-container">
+            <h2 class="doing__title">
+                Что я делаю
+            </h2>
+            <div class="doing__skills">
+                <p class="skills skills--tools">Вёрстка лендинг–страници сайтов любой сложности</p>
+                <p class="skills skills--responsive">Адаптивная вёрстка под все браузеры и устройства</p>
+                <p class="skills skills--programming">Frontend–разработка и программирование</p>
+                <p class="skills skills--coding">Исправление и доработка существующей вёрстки</p>
+            </div>
+            <a class="button-page" href="#price">Узнать стоимость</a>
+        </section>
+
+        
+<!-- БЛОК "ПРИМЕРЫ МОИХ РАБОТ" -->
+
+        <section id="portfolio" class="my-work">
+            <div class="fixed-container">
+                <h3 class="my-work__title">
+                    Примеры моих работ
+                </h3>
+                <div class="my-work__examples">
+                    <button class="my-work__arrow my-work--arrow-left" aria-label="Стрелка влево"></button>
+                    <a href="#" class="my-work__example">
+                        <img class="example example--psychologist" src="img/my-works/psychologist.jpg" alt="Психолог"><br>
+                        <span class="my-work__example-text">Сайт психолога</span>
+                    </a>
+                    <a href="#" class="my-work__example">
+                        <img class="example example--children" src="img/my-works/children.jpg" alt="Детская одежда"><br>
+                        <span class="my-work__example-text">Сайт магазин детской одежды</span>
+                    </a>
+                    <a href="#" class="my-work__example">
+                        <img class="example example--fishing" src="img/my-works/fishing.jpg" alt="Рыбалка"><br>
+                        <span class="my-work__example-text">Сайт магазина «Рыболов»</span>
+                    </a>
+                    <button class="my-work__arrow my-work--arrow-right" aria-label="Стрелка вправо"></button>
+                </div>
+                <a class="button-page" href="#">Заказать проект</a>
+            </div>
+        </section>        
+
+<!-- БЛОК "ЦЕНЫ" -->
+
+        <section id="price" class="price">
+            <section class="price-wrapper">
+                <div class="price__elements flying-elements" aria-hidden="true">
+                    <span class="flying-elements__symbol flying-elements__symbol--1">{&nbsp;}</span>
+                    <span class="flying-elements__symbol flying-elements__symbol--2">&lt;/&gt;</span>
+                    <span class="flying-elements__symbol flying-elements__symbol--3">#</span>
+                    <span class="flying-elements__symbol flying-elements__symbol--4">&lt;div&gt;</span>
+                    <span class="flying-elements__symbol flying-elements__symbol--5">{&nbsp;}</span>
+                </div>
+                <div class="price__description fixed-container">
+                    <h3 class="price__text">
+                        Адаптивная вёрстка под все устройства
+                        и браузеры от 1000 рублей всего за 4 часа.*
+                    </h3>
+                    <span class="price__note">
+                        * Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально,
+                        в зависимости от сложности задач.
+                    </span>
+                </div>
+            </section>
+        </section>
+    </main>
+
+<!-- БЛОК "ФУТЕР" -->
+
+    <footer>
+        <div class="footer fixed-container">
+            <ul class="footer-nav">
+                <li><a href="#service" class="footer-nav__link">Услуги</a></li>
+                <li><a href="#portfolio" class="footer-nav__link">Портфолио</a></li>
+                <li><a href="#price" class="footer-nav__link">Стоимость</a></li>
+            </ul>
+            <address class="footer-contact">
+                <a class="footer-contact__link footer-contact--tel" href="tel:+79996770123">+7 (999) 677-01-23</a>
+                <a class="footer-contact__link footer-contact--email" href="mailto:futurama532@gmail.com">futurama532@gmail.com</a>
+            </address>
+            <div class="footer-social">
+                <button class="cell-button footer-social__cell-button" id="footer-cell-button">Заказать звонок</button>
+                <ul class="footer-social__links">
+                    <li><a class="footer-social__link footer-social--vk" href="https://vk.com/" target="_blank"></a></li>
+                    <li><a class="footer-social__link footer-social--fb" href="https://facebook.com/" target="_blank"></a></li>
+                    <li><a class="footer-social__link footer-social--tw" href="https://twitter.com/" target="_blank"></a></li>
+                    <li><a class="footer-social__link footer-social--inst" href="https://instagram.com/" target="_blank"></a></li>
+                </ul>        
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright__text">
+                © Богач Эдуард, 2018 – 2019 
+            </p>
+        </div>
+    </footer>
+
+<!-- СТРЕЛКА-ЯКОРЬ НАВЕРХ -->
+
+    <div class="arrow-top">
+        <a class="arrow-top__link" href="#top"><img class="arrow-top__img" src="img/arrow.png" alt="стрелка вверх"></a>
+    </div>
+
+<!-- ВСПЛЫВАЮЩАЯ ФОРМА -->
+
+    <div class="pop-up" id="pop-up">
+        <div class="pop-up__wrapper" id="form-container">
+            <span class="pop-up__info">
+                <span class="pop-up__info-cross" id="cross">X</span>
+                Закажите обратный звонок, и наш <br>
+                консультант свяжется с Вами
+            </span>
+            <form class="pop-up__form" action="#">
+                <input class="pop-up__form-input pop-up__text" type="text" placeholder="Введите своё имя"><br>
+                <input class="pop-up__form-input pop-up__tel" type="tel" placeholder="Введите свой телефон"><br>
+                <input class="pop-up__form-input pop-up__button" type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
