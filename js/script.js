@@ -83,13 +83,29 @@ $('#header-button').on('click', function(){
 
 // ПЛАВНЫЙ СКРОЛЛ ПО "ЯКОРЯМ"
 
-var $page = $('html, body');
+let $page = $('html, body');
 $('a[href*="#"]').click(function() {
+
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
     return false;
+
 });
+
+// ПОЯВЛЕНИЕ КНОПКИ "ВВЕРХ" ПРИ ПРОКРУТКИ СТРАНИЦЫ
+
+let btn = document.querySelector('.arrow-top')
+
+function magic() {
+  if (window.pageYOffset > 400) {
+    btn.style.opacity = '1'
+  } else { btn.style.opacity = '0' }
+}
+btn.onclick = function () {
+	window.scrollTo(0,0)
+}
+window.onscroll = magic
 
 
 });

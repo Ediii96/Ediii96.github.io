@@ -1726,6 +1726,7 @@ body {
 
 .arrow-top {
 
+    opacity: 0;
     position: fixed;
     bottom: 30px;
     right: 20px;
