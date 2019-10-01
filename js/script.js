@@ -51,24 +51,23 @@ $('#header-button').on('click', function(){
     let body = $('body');
 
 // ПОЯВЛЕНИЕ И ИСЧЕЗНОВЕРИЕ МЕНЮ
+    if( mobiMenu.css('opacity') == '0' ){
+        mobiMenu.css('opacity', '1');
+    }
+    else{
+        mobiMenu.css('opacity', '0');
+    }
+
     
-    mobiMenu.fadeToggle(300, function(){
-        if ( $(this).css('display') === 'none' ) {
-            $(this).removeAttr('style');
-        }
-    });
 
 // ОТКЛЮЧЕНИЕ СКРОЛЛА
-
     body.toggleClass('scroll-off');
 
 // АНИМАЦИЯ БУРГЕР КНОПКИ 
-
     let lineOne = $('#lineOne');
     let lineTwo = $('#lineTwo');
     let lineThree = $('#lineThree');
     
-
     lineOne.toggleClass('animate-active');
 
     lineTwo.toggle(100, function(){
@@ -80,6 +79,41 @@ $('#header-button').on('click', function(){
     lineThree.toggleClass('animate-active-stock');
 
 });
+
+// ВКЛЮЧЕНИЕ СКРОЛЛА ПРИ НАЖАТИИ НА ОДНУ ИЗ ССЫЛОК ИЗ БУРГЕР МЕНЮ В МОБИЛЬНОЙ ВЕРСИИ САЙТА
+$(window).on('resize', function(event){
+    let windowSize = $(window).width(); 
+    let mobiMenu = $('#header-link');
+    let headerLink = $('#header-link').find('.header-nav__link');
+
+    if(windowSize < 1024){
+        headerLink.on('click', function() { 
+            console.log('1234567890');
+
+// АНИМАЦИЯ БУРГЕР КНОПКИ
+            let lineOne = $('#lineOne');
+            let lineTwo = $('#lineTwo');
+            let lineThree = $('#lineThree');
+            lineOne.removeClass('animate-active');
+            lineTwo.toggle(100, function(){
+                if ( $(this).css('display') === 'none' ) {
+                    $(this).removeAttr('style');
+                }
+            });
+            lineThree.removeClass('animate-active-stock');
+
+// ПОЯВЛЕНИЕ И ИСЧЕЗНОВЕРИЕ МЕНЮ
+            if( mobiMenu.css('opacity') == '1' ){
+                mobiMenu.css('opacity', '0');
+            }
+
+// ВКЛЮЧЕНИЕ СКРОЛЛА
+            $('body').removeClass('scroll-off');
+        });
+    }
+});
+
+
 
 // ПЛАВНЫЙ СКРОЛЛ ПО "ЯКОРЯМ"
 
@@ -105,7 +139,6 @@ function magic() {
 btn.onclick = function () {
 	window.scrollTo(0,0)
 }
-window.onscroll = magic
-
+window.onscroll = magic;
 
 });
