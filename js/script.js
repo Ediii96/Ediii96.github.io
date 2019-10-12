@@ -107,7 +107,7 @@ $('a[href*="#"]').click(function() {
 
 // ПОЯВЛЕНИЕ КНОПКИ "ВВЕРХ" ПРИ ПРОКРУТКИ СТРАНИЦЫ
 
-let btn = document.querySelector('.arrow-top')
+let btn = document.querySelector('.arrow-top');
 
 function magic() {
   if (window.pageYOffset > 400) {
@@ -116,7 +116,8 @@ function magic() {
 }
 btn.onclick = function () {
 	window.scrollTo(0,0)
-}
+};
+
 window.onscroll = magic;
 
 });
