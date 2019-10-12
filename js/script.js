@@ -81,6 +81,9 @@ $(window).on('resize', function(event){
             if( mobiMenu.css('display') == 'block' ){
                 mobiMenu.css('display', 'none');
             }
+// ПОСТАВИТЬ АНИМАЦИЮ БУРГЕР КНОПКИ В НАЧАЛЬНОЕ ПОЛОЖЕНИЕ
+
+            $('#header-button').removeClass('animate');      
 
 // ВКЛЮЧЕНИЕ СКРОЛЛА
             $('body').removeClass('scroll-off');

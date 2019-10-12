@@ -154,13 +154,7 @@ body {
 
 @media (max-width: 900px) {
 
-    .h--3 {
-
-        font-size: 28px;
-        padding-right: 0px;
-        padding-left: 0px;
-
-    }
+    .h--3 { font-size: 28px; }
 
 }
 
@@ -386,7 +380,7 @@ body {
 
     }
 
-    .nav__list > li { margin-bottom: 40px; }
+    .nav__list li:not(:last-child) { margin-bottom: 40px; }
 
     .header__button {
 
