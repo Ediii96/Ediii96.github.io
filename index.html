@@ -75,22 +75,32 @@
                 <h2 class="h h--2">
                     Примеры моих работ
                 </h2>
-                <div class="my-work__examples">
-                    <button class="my-work__arrow my-work--arrow-left" aria-label="Стрелка влево"></button>
-                    <a href="#" class="example example--psychologist">
-                        <img class="example__photo" src="img/my-works/psychologist.jpg" alt="Психолог"><br>
-                        <span class="example__text">Сайт психолога</span>
-                    </a>
-                    <a href="#" class="example example--children">
-                        <img class="example__photo" src="img/my-works/children.jpg" alt="Детская одежда"><br>
-                        <span class="example__text">Сайт магазин детской одежды</span>
-                    </a>
-                    <a href="#" class="example example--fishing">
-                        <img class="example__photo" src="img/my-works/fishing.jpg" alt="Рыбалка"><br>
-                        <span class="example__text">Сайт магазина «Рыболов»</span>
-                    </a>
-                    <button class="my-work__arrow my-work--arrow-right" aria-label="Стрелка вправо"></button>
-                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <img src="img/my-works/psychologist.jpg">
+                      <div class="text">Сайт психолога</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                      <img src="img/my-works/children.jpg">
+                      <div class="text">Сайт магазин детской одежды</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="img/my-works/fishing.jpg">
+                      <div class="text">Сайт магазина «Рыболов»</div>
+                    </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
                 <a class="button button--page" href="#">Заказать проект</a>
             </div>
         </section>        
